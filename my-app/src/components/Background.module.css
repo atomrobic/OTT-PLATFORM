@@ -1,0 +1,32 @@
+/* MovieDetails.module.css */
+.background {
+    background: linear-gradient(135.8deg, rgb(26, 26, 29) 27.1%, rgb(111, 34, 50) 77.5%);
+    min-height: 100vh; /* Ensures full viewport height */
+    padding: 20px; /* Optional: Adds padding around the content */
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    max-height: max-content;
+}
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none; /* Remove default outline */
+}
+
+/* Success button styles */
+.success-button {
+  background-color: #007bff; /* Blue color for Success */
+  color: white;
+}
+
+.success-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}

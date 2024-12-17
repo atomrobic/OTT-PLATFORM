@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Plan Details{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h3 class="text-center bg-secondary text-light p-3 mt-5">Plans List</h3>
+    <table class="table border">
+        <thead>
+            <tr class="text-center">
+                <th scope="col">Sl No</th>
+                <th scope="col">Plan Name</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for plan in plans %}
+            <tr class="text-center">
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ plan.name }}</td>
+                <td>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#features-{{ forloop.counter }}">
+                        View Features
+                    </button>
+                </td>
+            </tr>
+            <tr class="collapse" id="features-{{ forloop.counter }}">
+                <td colspan="3">
+                    <ul>
+                        {% for feature in plan.features %}
+                        <li>{{ feature }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h3 class="text-center bg-secondary text-light p-3">User List</h3>
+    <table class="table border">
+        <thead>
+            <tr class="text-center">
+                <th>User ID</th>
+                <th>Username</th>
+                <th>Last Login</th>
+                <th>Action</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr class="text-center">
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.last_login }}</td>
+                <td>
+                    <button
+                        id="blockUnblockBtn{{ user.id }}"
+                        class="btn {% if user.is_active %}btn-danger{% else %}btn-success{% endif %}"
+                        onclick="toggleBlockStatus({{ user.id }}, {{ user.is_active|yesno:'true,false' }})"
+                    >
+                        {% if user.is_active %}Block{% else %}Unblock{% endif %}
+                    </button>
+                </td>
+                <td>{{ user.is_active|yesno:"Active,Blocked" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function getCSRFToken() {
+        const cookieValue = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('csrftoken='))
+            ?.split('=')[1];
+        return cookieValue || '';
+    }
+    function toggleBlockStatus(userId, isActive) {
+        const button = document.getElementById(`blockUnblockBtn${userId}`);
+        const newStatus = !isActive;
+
+        // Update button UI
+        button.textContent = newStatus ? 'Unblock' : 'Block';
+        button.classList.toggle('btn-danger', !newStatus);
+        button.classList.toggle('btn-success', newStatus);
+
+        // Send AJAX request to update status
+        fetch(`/update_user_status/${userId}/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': getCSRFToken(),
+            },
+            body: JSON.stringify({ is_active: newStatus }),
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log(`User ${userId} status successfully updated.`);
+            } else {
+                console.error('Failed to update user status.');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+ 
+</script>
+{% endblock %}

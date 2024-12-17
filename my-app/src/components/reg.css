@@ -1,0 +1,137 @@
+/* General Container */
+.login-wrp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+}
+body{
+
+
+  background-image: url(https://cdn.pixabay.com/photo/2018/04/16/12/59/mountains-3324569_1280.jpg);
+
+}
+/* Header Section */
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+}
+
+/* Register Form Section */
+.bottom {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Registration Title */
+.h42 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.brands {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #ff9f00;
+}
+
+/* Input Fields */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 1rem;
+  color: #000; 
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Error Message */
+.error-message {
+  color: #f00;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Buttons */
+.btn1 {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  
+}
+
+.btn1:hover {
+  background: #0056b3;
+}
+
+/* Link Button */
+.btn-link {
+  color: #074533;
+  margin-top: 40px;
+  display: block;
+  border-radius: 20px;
+  margin-left: 150px;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bottom {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .h42 {
+    font-size: 1.2rem;
+  }
+
+  .form-control {
+    padding: 8px;
+  }
+
+  .btn1 {
+    padding: 8px;
+  }
+}

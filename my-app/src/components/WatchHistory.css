@@ -1,0 +1,35 @@
+
+  
+  h3 {
+    text-align: center;
+margin-top: 1px;  }
+  
+  .table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 5px; /* Adds spacing between rows */
+    overflow-y: scroll;
+  }
+  
+  .table th, .table td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fff;
+    
+  }
+  
+  .table img {
+    border-radius: 4px;
+  }
+  
+  .hover:hover {
+    background-color: beige; /* Beige color for hover effect */
+    color: black; /* Text color changes to black on hover */
+  }
+  
+  .table thead {
+    background-color: #f7f3f3;
+    color: #333; /* Dark text for header to improve readability */
+  }
+  

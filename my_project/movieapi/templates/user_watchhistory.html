@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Watch History{% endblock %}
+
+{% block content %}
+<div class="container justify-content-center bg-container">
+    <div class="heading">
+        <h2 class="text-center bg-secondary p-3 text-light">Watch History</h2>
+    </div>
+
+    <!-- Responsive Table -->
+    <div class="table-responsive mt-5">
+        <table class="table">
+            <thead>
+                <tr class="text-center">
+                    <th>Watched Movie</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for movie, date in watch_history %}
+                <tr>
+                    <td>{{ movie }}</td>
+                    <td>{{ date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- End of Responsive Table -->
+</div>
+{% endblock %}

@@ -1,0 +1,162 @@
+/* Parallax Section */
+#top {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+  }
+  
+  #watch-now-button {
+    position: absolute;
+    top: 60%; /* Adjust to position the button vertically */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff6347; /* Adjust button color */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2; /* Ensure it's above other elements */
+    transition: background-color 0.3s ease-out;
+
+  }
+  
+  #watch-now-button:hover {
+    background-color: #ee6a6a; /* Hover effect */
+  }
+  #watch-now {
+    margin-top: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #eae0e0;
+    color: #000;
+    border: 2px solid #000;  /* Add border color */
+    padding: 10px 20px;       /* Adjust padding */
+    cursor: pointer;         /* Add pointer cursor for interactivity */
+    font-size: 1rem;          /* Optional: Adjust font size */
+    display: inline-block;    /* Ensure button is inline */
+    text-align: center;       /* Center text inside button */
+    border-radius: 5px;       /* Optional: Rounded corners */
+    transition: background-color 0.3s ease, border-color 0.3s ease;  /* Add transition effects */
+  }
+  #watch-now:hover{
+
+    background-color: #c51111;
+    color: #e8dfdf;
+  }
+  /* Top Section Image Styling */
+  #top img {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Ensure the images cover the viewport */
+    object-fit:fill;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.2s ease-out;
+  }
+  
+  #top img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Text Styling */
+  #text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    z-index: 1;
+    margin-top: 150px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease-out;
+  }
+  
+  #tagline {
+    color: #eae0e0;
+    margin-top: 200px;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  #text:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    color: #ee6a6a;
+  }
+  
+  #tagline:hover {
+    color: #ff6347;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Welcome Section */
+  #sec {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f4f4f4;
+    min-height: 100vh; /* Full screen height for Welcome section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #sec h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #sec p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Footer */
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    background-color: #222;
+    position: relative;
+  }
+  
+  footer a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+  }
+  
+  footer a:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+  }
+  
+  footer {
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    #text {
+      font-size: 2.5rem;
+    }
+  
+    footer a {
+      font-size: 1.2rem;
+    }
+  
+    #watch-now-button {
+      font-size: 1rem; /* Adjust button size for mobile */
+      padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+  }
+  

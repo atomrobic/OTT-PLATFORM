@@ -1,0 +1,102 @@
+.star-rating {
+    gap: 5px;
+    display: flex;
+    cursor: pointer;
+    background-color: rgb(223, 222, 222); /* Set background color to light gray */
+    padding: 10px; /* Optional: Add padding for better spacing around stars */
+    border-radius: 5px; /* Optional: Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Light shadow for visual depth */
+  }
+  
+  .star-rating span {
+    font-size: 24px; /* Adjust size as needed */
+  }
+  
+  .star-rating span.filled {
+    color: gold; /* Color for filled stars */
+  }
+  
+  .star-rating span.empty {
+    color: rgb(182, 172, 172); /* Color for empty stars */
+  }
+  
+  p {
+    position: relative;
+    top: 7px;
+  }
+  
+  .btns {
+    background-color: #28a745; /* Green color for Add Rating button */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+  }
+  
+  .btns:hover {
+    background-color: #218838; /* Darker green when hovered */
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  
+  .btns:focus {
+    outline: none; /* Remove the focus outline for a cleaner look */
+  }
+  
+  .watchLater-button {
+    background-color: #007bff; /* Blue color for Watch Later button */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 30px; /* Smooth transition */
+  }
+  
+  .watchLater-button:hover {
+    background-color: #0056b3; /* Darker blue when hovered */
+  }
+  
+  .watchLater-button:focus {
+    outline: none; /* Remove the focus outline for a cleaner look */
+  }
+  
+  /* Flexbox layout for buttons */
+  .buttons-container {
+    display: flex;
+    justify-content: space-between; /* Space buttons evenly */
+    align-items: center; /* Vertically center the buttons */
+    width: 100%; /* Ensure buttons take up full width */
+    margin-top: 20px; /* Space above the buttons */
+    padding: 0 20px; /* Add some padding to the left and right for better spacing */
+  }
+  
+  .add-rating-button,
+  .watchLater-button {
+    flex: 1; /* Make buttons take equal width */
+    margin: 0 10px; /* Add space between the buttons */
+  }
+  /* Limit the description height and show "Read More" effect */
+.card-text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  max-height: 60px; /* Set the maximum height for description */
+  overflow: hidden; /* Hide overflowed text */
+  text-overflow: ellipsis; /* Add ellipsis for long descriptions */
+  position: relative;
+}
+
+/* Optional: Style for "Read More" link */
+.card-text::after {
+  color: #007bff;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  font-size: 12px;
+}

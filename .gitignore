@@ -1,0 +1,69 @@
+# General
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+*.log
+*.env
+.env/
+
+# React (my-app)
+my-app/node_modules/
+my-app/build/
+my-app/.DS_Store
+my-app/npm-debug.log*
+my-app/yarn-debug.log*
+my-app/yarn-error.log*
+my-app/.eslintcache
+my-app/.env
+my-app/package-lock.json
+my-app/yarn.lock
+
+# Django (my_project)
+my_project/staticfiles/
+my_project/media/
+my_project/.DS_Store
+my_project/db.sqlite3
+my_project/db.sqlite3-journal
+my_project/local_settings.py
+my_project/*.pyc
+my_project/logs/
+
+# OS-specific files
+Thumbs.db
+.DS_Store
+
+# Editor-specific files
+.vscode/
+.idea/
+*.iml
+*.sw?
+*.sublime-workspace
+
+# Python virtual environment
+venv/
+.env/
+.env.*.local
+*.venv
+pip-log.txt
+pip-delete-this-directory.txt
+__pypackages__/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Testing and Debugging
+*.out
+*.err
+
+# Migrations (optional - ignore generated migrations)
+**/migrations/__pycache__/
+**/migrations/*.pyc

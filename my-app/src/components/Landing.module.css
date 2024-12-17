@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Kablammo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Wet+Paint&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgba(17, 1, 1, 0.8), 
+                     0 0 10px rgba(255, 0, 0, 0.6), 
+                     0 0 20px rgba(255, 0, 0, 0.4);
+    }
+    10% {
+        text-shadow: 0 0 9px rgba(100, 100, 100, 1), 
+                     0 0 30px rgba(218, 192, 192, 0.8), 
+                     0 0 40px rgba(27, 9, 9, 0.6);
+    }
+    10% {
+        text-shadow: 0 0 5px rgba(100, 100, 100, 0.8), 
+                     0 0 10px rgba(255, 0, 0, 0.6), 
+                     0 0 20px rgba(7, 4, 4, 0.4);
+    }
+}
+
+.h12 {
+    color: #3c25bf;
+    font-family: 'Black Ops One', sans-serif;
+    animation: glow 10s infinite; /* Continuous animation */
+    transition: color 0.5s ease; /* Smooth transition for other effects */
+}
+
+body {
+    background-image: url(https://payload.cargocollective.com/1/11/367710/13568488/CINEMA-CLASSICS-POSTER_RUTGERS_3600.jpg);
+    font-family: 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.h12{
+    color: #cbc7e2;
+    font-family: 'Black Ops One', sans-serif;
+    transition: color 0.9s ease; /* Smooth transition */
+}
+
+.h12:hover {
+    color: #c50303; /* Lighter color on hover */
+}
+
+.btn-blue {
+    background: #007bff; /* Blue color */
+    color: #fff;
+    border: 5px solid #ffffff; /* White border */
+    padding: 0.4rem 1.3rem;
+    font-weight: 700;
+}
+
+.btn-blue:hover {
+    background: #0056b3; /* Darker blue on hover */
+    opacity: 0.9;
+    color: #fff;
+    border-radius: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #cbc7e2;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+.img-land {
+    width: 100%;
+     /* Maintain aspect ratio */
+}
+
+.showcase {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+}
+
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+.showcase-top {
+    position: relative;
+    z-index: 2;
+    height: 90px;
+}
+
+.showcase-top img {
+    width: 170px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    transform: translate(-50%, -50%);
+}
+
+.showcase-top a {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.showcase-content {
+    position: relative;
+    z-index: 2;
+    width: 65%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%; /* Full height to center content vertically */
+}
+
+.showcase-content h1 {
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.1;
+    margin: 0 0 2rem;
+}
+
+.showcase-content p {
+    text-transform: uppercase;
+    color: #b3a7a7;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin: 0 0 2rem;
+    text-shadow: #000000;
+}
+
+/* Text Styles */
+.text-xl {
+    font-size: 2rem;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.text-md {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-dark {
+    color: #999;
+}
+
+@media (max-width: 960px) {
+    .showcase {
+        height: calc(100vh - env(safe-area-inset-bottom)); /* Adjust for safe area */
+
+    }
+
+    .showcase-top img {
+        top: 30%;
+        left: 5%;
+        transform: translate(0);
+    }
+
+    .showcase-content h1 {
+        font-size: 3.7rem;
+        line-height: 1;
+    }
+
+    .showcase-content p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .showcase {
+        height: 600px; /* Set fixed height of 600px for smaller screens */
+    }
+  
+    .showcase::after {
+        background: rgba(0, 0, 0, 0.6);
+        box-shadow: inset 80px 80px 150px #000000, inset -80px -80px 150px #000000;
+    }
+
+    .showcase-content h1 {
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+
+    .showcase-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-height: 600px) {
+    .showcase-content {
+        height: auto; /* Let content determine the height */
+    }
+}

@@ -1,0 +1,81 @@
+/* Make navbar sticky at the top */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+/* Change opacity when scrolled */
+.navbar.scrolled {
+  opacity: 0.7; /* Lower opacity after scrolling */
+  background-color: #a91e1e; /* Optional: Change the background color when scrolling */
+}
+
+/* Navbar Brand Styles */
+.navbar-brand {
+  margin: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(29, 23, 23);
+  box-shadow: 0 0 20px #d5d0d0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.navbar-brand:hover {
+  background-position: right center;
+  color: #9e1a1a;
+  text-decoration: none;
+}
+
+/* Navbar link styles */
+.nav-link {
+  color: #333;
+  transition: color 0.9s ease;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 5px 10px;
+}
+
+/* Hover effect for navbar links */
+.nav-link:hover {
+  color: #101010;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo image styles */
+.logo {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 40px;
+  margin-left: 50px;
+  animation: fadeMove 5s infinite alternate ease-in-out;
+}
+
+@keyframes fadeMove {
+  0% {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Make logo and text align properly */
+.navbar-brand img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}

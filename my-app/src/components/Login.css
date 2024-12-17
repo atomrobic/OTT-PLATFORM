@@ -1,0 +1,114 @@
+/* General Container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+}
+
+/* Header Section */
+.login-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+body{
+
+  background-image: url(https://cdn.pixabay.com/photo/2018/04/16/12/59/mountains-3324569_1280.jpg);
+
+}
+.login-logo {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+}
+
+/* Login Form Section */
+.login-body {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Input Fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 1rem;
+  color: #000;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(153, 162, 172, 0.5);
+}
+
+/* Error Message */
+.error-text {
+  color: #f00;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Buttons */
+.btn-submit {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  position: relative;
+}
+
+.btn-submit:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-body {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-title {
+    font-size: 1.2rem;
+  }
+
+  .input-field {
+    padding: 8px;
+  }
+
+  .btn-submit {
+    padding: 8px;
+  }
+}

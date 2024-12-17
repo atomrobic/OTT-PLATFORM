@@ -1,0 +1,111 @@
+/* Styling for the Movie Details Page */
+.container.bg-container {
+    background-color: #f9f9f9; /* Light gray background for better readability */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-align: center;
+    color: #343a40;
+    text-align: center; /* Center the title text horizontally */
+
+}
+
+/* Table styling */
+.table {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.table thead th {
+    background-color: #343a40; /* Dark background for headers */
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.table tbody tr {
+    transition: background-color 0.3s;
+}
+
+.table tbody tr:hover {
+    background-color: #f0f0f0; /* Subtle highlight on hover */
+}
+
+.table img {
+    width: 150px;
+    height:200px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 2px;
+    right: 10px;
+}
+
+/* Video styling */
+.video,
+iframe {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 200px; /* Set a fixed height for the video */
+    object-fit: cover; /* Ensure video doesn't distort */
+}
+
+/* Description overlay styling */
+.table td {
+    position: relative; /* Make the description container the relative parent */
+}
+
+td p.overlay {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 50px; /* Position description at the bottom */
+    left: 4px;
+    right: 10px;
+    top: 10px;
+    height: 200px; /* Fixed height */
+    overflow-y: auto; /* Enable scrolling if content exceeds max height */
+    text-overflow:inherit /* Shorten text with ellipsis if it overflows */
+}   
+
+/* Responsive adjustments */
+@media (max-width: 995px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .table img {
+       max-width: 50px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+    .table td p.overlay {
+        font-size: 0.9rem;
+        max-height: 120px; /* Adjust for smaller screens */
+        bottom: 10px;
+    }
+}

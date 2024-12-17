@@ -1,0 +1,92 @@
+/* WatchLater.css */
+
+/* Add a fade-out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+
+.Button1 {
+  color: rgb(7, 12, 10);
+  background-color: #020000;
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Button1:hover {
+  background-color: #d4cccc;
+  color: #333;
+}
+
+/* Animation class for row removal */
+.removing {
+  animation: fadeOut 0.3s forwards;
+}
+/* Ensure table layout is fixed */
+.table {
+  table-layout: fixed; /* Fixed layout for equal cell width */
+  width: 100%; /* Ensure table spans the container */
+}
+
+/* Set column widths */
+.table th,
+.table td {
+  text-align: center; /* Center align text and images */
+  vertical-align: middle; /* Vertically center content */
+  width: 33.33%; /* Divide equally into 3 columns */
+}
+
+/* Fixed image size for posters */
+.table img {
+  width: 100px; /* Set fixed width for poster images */
+  height:auto; /* Set fixed height for poster images */
+  object-fit: fill; /* Maintain aspect ratio and cover */
+}
+.card {
+  border: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.btn-danger {
+  font-size: 0.9rem;
+}
+.search-bar {
+  width: 50%;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.search-bar:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+h2{
+
+  display: flex;
+  color: #f5f3f3;
+  justify-content: center;
+}

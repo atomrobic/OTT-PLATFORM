@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Movie Details{% endblock %}
+
+
+
+{% block content %}
+<div class="container mt-1 bg-container p-5">
+    <h2 class="text-center bg-secondary p-3 text-light">Movie View</h2>
+
+    <div class="table-responsive">
+        <table class="table table-bordered text-center table-hover">
+            <thead>
+                <tr>
+
+                    <th>Title</th>
+                    <th>Thumbnail</th>
+                    <th>Video</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text-align-center">
+                    <td><b>  {{ movie.title }}</b></td>
+                    <td>
+                        <img src="{{ movie.thumbnail }}" alt="{{ movie.title }} Poster" class="user-photo">
+                    </td>
+                    <td>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ movie.video }}" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </td>
+                    <td>
+                        <p class="overlay">{{ movie.description }}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

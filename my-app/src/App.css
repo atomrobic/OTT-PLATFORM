@@ -1,0 +1,29 @@
+/* App.css */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll; /* Makes the body scrollable */
+    height: 100vh; /* Ensure full height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .App {
+    flex-grow: 1;
+    overflow-y: auto; /* Allow the App container to scroll */
+  }
+  
+  /* Optional: Customize the scrollbar (if desired) */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  

@@ -1,0 +1,61 @@
+/* App.css or a specific CSS file for your component */
+
+/* Container for the carousel */
+.carousel-container {
+    width: 100%;
+    max-width: 1200px; /* Adjust the max width */
+    margin: 0 auto; /* Centers the carousel */
+    padding: 20px;
+    background-color: aliceblue;
+  }
+  /* Set a fixed height for carousel images */
+.carousel-image {
+    height: 400px; /* Set the height you want for the images */
+    object-fit:fill; /* Ensures images cover the area without distortion */
+    object-position: center; /* Ensures the image is centered */
+  }
+  
+  /* Optional: Adjust the carousel container */
+  .carousel-item {
+    height: 400px; /* Same height as the images to maintain consistency */
+  }
+  
+  /* Styling for carousel images */
+  .carousel-image {
+    height: 400px; /* Set height as per your design */
+    width: 100%; /* Make sure the image takes up the full width of the container */
+    object-fit:inherit; /* Ensures images fill the space without distortion */
+    border-radius: 8px; /* Optional: Rounded corners for the image */
+  }
+  
+  /* Styling for the carousel captions */
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: rgb(225, 217, 217); /* Caption text color */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Center-align the caption */
+  }
+  
+  .carousel-caption h3 {
+    font-size: 1.8rem; /* Adjust the font size for the title */
+    font-weight: bold; /* Make the title bold */
+  }
+  
+  .carousel-caption p {
+    font-size: 1.2rem; /* Adjust the font size for the description */
+    font-style: italic; /* Optional: Style the description text */
+  }
+  
+  /* Optional: Add custom styling for the carousel controls */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #000; /* Change the color of the navigation arrows */
+    border-radius: 50%; /* Optional: Make the arrows round */
+  }
+  
+  /* Optional: Hover effect for carousel */
+  .carousel-container:hover .carousel-caption {
+    background-color: rgba(238, 227, 227, 0.7); /* Darker background when hovering over the carousel */
+  }
+  

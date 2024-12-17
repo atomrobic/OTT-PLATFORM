@@ -1,0 +1,107 @@
+/* Main scrollable container for movie cards */
+.scrollable-container {
+  display: flex;
+  justify-content: flex-start; /* Align items to the start of the container */
+  align-items: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  padding: 20px 0;
+  margin-top: 40px;
+  height: 100%; /* Ensure it takes the full height */
+  scroll-snap-type: x mandatory; /* Scroll snap for smooth left/right swipe */
+}
+
+/* Container that holds movie cards */
+.movie-cards-container {
+  display: flex;
+  gap: 20px; /* Space between the cards */
+  flex-wrap: nowrap; /* Prevent wrapping of items */
+  scroll-snap-type: x mandatory; /* Add smooth snap scrolling */
+}
+
+
+
+/* Image inside each card */
+.card-img-top {
+  width: 100%; /* Make sure the image takes the full width of the card */
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensure images cover the space without distortion */
+}
+
+/* Card body content */
+.card-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 200px); /* Ensure body content fills the remaining space */
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+/* Title inside each card */
+.card-title {
+  font-weight: bold;
+  text-align: center;
+  text-overflow: ellipsis; /* Add ellipsis for long titles */
+  white-space: nowrap; /* Prevent breaking the title into multiple lines */
+  overflow: hidden; /* Hide overflowing text */
+  font-size: clamp(16px, 2vw, 22px); /* Adjust font size dynamically */
+  margin-bottom: 1rem;
+}
+
+/* Watch Now button inside each card */
+.watch-now-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.watch-now-btn:hover {
+  background-color: #0056b3;
+}
+
+.watch-now-btn {
+  width: 230px;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: gold;
+  position: relative;
+}
+
+.star.empty {
+  color: lightgray;
+}
+
+.custom-star-class {
+  margin-right: 500px;  /* Example of additional styling */
+}
+
+span.movie-rating-stars {
+  position: relative;
+  left: 20px;
+}
+
+.rating-container {
+  background-color: rgb(14, 2, 2);
+  display: flex;
+  align-items: center; /* Align text and stars vertically */
+}
+
+.rating-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ede2e2; /* Dark gray for text */
+  margin-left: 10px;
+}
+
+.rating-stars {
+  display: flex;
+}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Movie edit{% endblock %}
+
+{% block content %}
+<div class="container mt-5 custom-container">
+    <h5 class="text-center custom-header">Edit Movie Details</h5>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+            <label for="id_title" class="form-label"><b>Movie Title</b></label>
+            {{ form.title }}
+        </div>
+
+        <div class="mb-3">
+            <label for="id_video" class="form-label"><b>Upload Video</b></label>
+            {{ form.video }}
+        </div>
+
+        <div class="mb-3">
+            <label for="id_thumbnail" class="form-label"><b>Upload Thumbnail</b></label>
+            {{ form.thumbnail }}
+        </div>
+
+        <div class="mb-3">
+            <label for="id_description" class="form-label"><b>Description</b></label>
+            {{ form.description }}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}
